@@ -3,6 +3,7 @@ flux get kustomizations --watch
 flux get helmreleases --all-namespaces
 flux logs --all-namespaces --level=error
 flux delete helmrelease karpenter --namespace karpenter
+kubectl delete helmrelease karpenter -n karpenter
 ```
 ```shell
 flux create source helm karpenter \
