@@ -16,7 +16,7 @@ spec:
       version: v0.27.3
   interval: 1m
   values:
-    replicas: 1
+    replicas: 2
     serviceAccount:
       annotations:
         eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/s-eks-ci-karpenter"
