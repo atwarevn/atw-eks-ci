@@ -15,9 +15,7 @@ spec:
         namespace: karpenter
       interval: 1m
       version: v0.27.3
-  install:
-    createNamespace: true
-  interval: 1m0s
+  interval: 5m
   values:
     replicas: 1
     serviceAccount:
