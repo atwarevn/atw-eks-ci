@@ -5,6 +5,7 @@ metadata:
   name: karpenter
   namespace: karpenter
 spec:
+  releaseName: karpenter
   chart:
     spec:
       chart: karpenter
@@ -15,8 +16,12 @@ spec:
       interval: 1m
       version: v0.27.3
   interval: 1m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
   values:
-    replicas: 2
+    replicas: 1
     serviceAccount:
       annotations:
         eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/s-eks-ci-karpenter"
