@@ -23,5 +23,6 @@ spec:
     settings:
       aws:
         clusterName: s-eks-ci
+        clusterEndpoint: https://6156D0A359217C959D55986A40DB0DCC.gr7.ap-northeast-1.eks.amazonaws.com
         defaultInstanceProfile: KarpenterNodeInstanceProfile-s-eks-ci
         interruptionQueueName: s-eks-ci
