@@ -13,15 +13,6 @@ spec:
         kind: HelmRepository
         name: karpenter
       version: v0.27.3
+  install:
+    createNamespace: true
   interval: 1m0s
-  values:
-    replicas: 1
-    serviceAccount:
-      annotations:
-        eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/s-eks-ci-karpenter"
-        name: karpenter
-    settings:
-      aws:
-        clusterName: s-eks-ci
-        defaultInstanceProfile: KarpenterNodeInstanceProfile-s-eks-ci
-        interruptionQueueName: s-eks-ci
