@@ -12,7 +12,9 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: karpenter
+        namespace: karpenter
       version: v0.27.3
   install:
     createNamespace: true
   interval: 1m0s
+  targetNamespace: karpenter
