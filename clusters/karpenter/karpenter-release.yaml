@@ -14,7 +14,7 @@ spec:
         name: karpenter
       interval: 1m
       version: v0.27.3
-  interval: 4m
+  interval: 1m
   values:
     replicas: 1
     serviceAccount:
