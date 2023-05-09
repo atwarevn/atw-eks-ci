@@ -12,7 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: karpenter
-        namespace: karpenter
       interval: 1m
       version: v0.27.3
   interval: 4m
