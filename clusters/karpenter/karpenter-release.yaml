@@ -18,8 +18,6 @@ spec:
   interval: 1m
   install:
     createNamespace: true
-    remediation:
-      retries: 3
   values:
     replicas: 1
     serviceAccount:
