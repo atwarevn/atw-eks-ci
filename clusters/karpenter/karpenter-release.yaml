@@ -15,7 +15,7 @@ spec:
         name: karpenter
       interval: 1m
       version: v0.27.3
-  interval: 1m
+  interval: 24h
   install:
     createNamespace: true
   values:
