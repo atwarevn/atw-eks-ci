@@ -77,3 +77,14 @@ flux create helmrelease karpenter --chart karpenter \
    ```shell
    kubectl scale deployment/inflate --replicas=5
    ```
+### Reconciler error
+Error message: `error GitRepository/flux-system.flux-system - Reconciler error failed to checkout and determine revision: unable to list remote for 'https://github.com/atwarevn/atw-eks-ci': authentication required`
+1. Generate new token.
+2. Encode token.
+   ```shell
+   echo -n 'NEW_TOKEN' | base64
+   ```
+3. Edit secret with encoded token.
+   ```shell
+   kubectl edit secrets flux-system -n flux-system
+   ```
