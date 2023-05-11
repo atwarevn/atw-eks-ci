@@ -34,5 +34,46 @@ flux create helmrelease karpenter --chart karpenter \
   --namespace karpenter \
   --create-target-namespace \
   --export > ./clusters/karpenter/karpenter-release.yaml
-
 ```
+
+# Troubleshooting
+### Cluster Nodes got Unknown status
+1. Check cluster endpoint in `karpenter-release.yaml`.
+   ```shell
+   export CLUSTER_NAME="s-eks-ci"
+   export CLUSTER_ENDPOINT="$(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.endpoint" --output text --profile atwarevn-dev)"
+   echo $CLUSTER_ENDPOINT
+   ```
+2. Delete Unknown-status nodes:
+    ```shell
+   kubectl delete node NODE_NAME
+   ```
+3. Test scaling
+   ```shell
+   cat <<EOF | kubectl apply -f -
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: inflate
+   spec:
+     replicas: 0
+     selector:
+       matchLabels:
+         app: inflate
+     template:
+       metadata:
+         labels:
+           app: inflate
+       spec:
+         terminationGracePeriodSeconds: 0
+         containers:
+           - name: inflate
+             image: public.ecr.aws/eks-distro/kubernetes/pause:3.7
+             resources:
+               requests:
+                 cpu: 1
+   EOF
+   ```
+   ```shell
+   kubectl scale deployment/inflate --replicas=5
+   ```

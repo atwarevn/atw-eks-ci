@@ -22,12 +22,13 @@ spec:
     replicas: 1
     serviceAccount:
       annotations:
+        # TODO: update after finishing Terraform
         eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/s-eks-ci-karpenter"
         name: karpenter
     settings:
       aws:
+        # TODO: update after finishing Terraform
         clusterName: s-eks-ci
-        # TODO: need to update when creating new cluster
         clusterEndpoint: https://2559F70CAE496B5B795F5E79E87701E0.sk1.ap-northeast-1.eks.amazonaws.com
         defaultInstanceProfile: KarpenterNodeInstanceProfile-s-eks-ci
         interruptionQueueName: s-eks-ci
