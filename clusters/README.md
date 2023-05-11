@@ -1,3 +1,18 @@
+**Install Flux**
+```shell
+brew install fluxcd/tap/flux
+```
+**Set permission to access Cluster**
+```shell
+eksctl create iamidentitymapping \
+--cluster s-eks-ci  \
+--region ap-northeast-1 \
+--arn arn:aws:iam::234002441930:user/habac.jacie@atware.asia \
+--group system:masters \
+--no-duplicate-arns \
+--username jacie \
+--profile atwarevn-dev
+```
 ```shell
 flux get kustomizations --watch
 flux get helmreleases --all-namespaces

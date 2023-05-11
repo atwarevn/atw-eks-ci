@@ -23,3 +23,13 @@ spec:
   providerRef:
     name: karpenter
   ttlSecondsAfterEmpty: 30
+---
+apiVersion: karpenter.k8s.aws/v1alpha1
+kind: AWSNodeTemplate
+metadata:
+  name: karpenter
+spec:
+  subnetSelector:
+    karpenter.sh/discovery: s-eks-ci
+  securityGroupSelector:
+    karpenter.sh/discovery: s-eks-ci
