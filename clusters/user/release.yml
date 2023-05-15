@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user
+  namespace: default
+data:
+  mapUsers: |
+    - userarn: arn:aws:iam::234002441930:user/habac.jacie@atware.asia
+      username: jacie
