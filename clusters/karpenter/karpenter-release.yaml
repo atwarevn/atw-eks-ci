@@ -29,7 +29,7 @@ spec:
       aws:
         # TODO: update after finishing Terraform
         clusterName: s-eks-ci
-        clusterEndpoint: https://2559F70CAE496B5B795F5E79E87701E0.sk1.ap-northeast-1.eks.amazonaws.com
+        clusterEndpoint: https://24EA2CF7717A43BBDBF1F8645ADAD145.gr7.ap-northeast-1.eks.amazonaws.com
         defaultInstanceProfile: KarpenterNodeInstanceProfile-s-eks-ci
         interruptionQueueName: s-eks-ci
 
