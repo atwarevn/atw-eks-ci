@@ -177,7 +177,7 @@ kubectl create namespace actions-runner-system
 
 kubectl create secret generic controller-manager \
     -n actions-runner-system \
-    --from-literal=github_token=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
+    --from-literal=github_token=***
 ```
 
 ### Auto-scaling Runner
@@ -204,13 +204,13 @@ kubectl get runners -A
 
 ## Setup Flux for automated sync cluster configuration
 ```shell
-export GITHUB_TOKEN=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
+export GITHUB_TOKEN=***
 export GITHUB_USER=jack.harrison@atware.asia
 
 flux bootstrap git \
   --url=https://github.com/atwarevn/atw-eks-ci \
   --username=jack.harrison@atware.asia \
-  --password=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 \
+  --password=*** \
   --token-auth=true \
   --path=./clusters
 ```
