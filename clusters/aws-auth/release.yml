@@ -7,3 +7,5 @@ data:
   mapUsers: |
     - userarn: arn:aws:iam::234002441930:user/habac.jacie@atware.asia
       username: jacie
+      groups:
+        - system:masters
