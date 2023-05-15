@@ -6,7 +6,7 @@ metadata:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: karpenter
+  name: karpenter-source
   namespace: karpenter
 spec:
   interval: 1m0s
