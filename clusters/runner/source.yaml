@@ -11,3 +11,12 @@ metadata:
 type: Opaque
 data:
   github_token: Z2hwX1doWG9vdGpaUE9ZQ1h1NzBnQll4bnhZc1Jqd1Z5ZDFFSGxMWA==
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: actions-runner-controller
+  namespace: actions-runner-system
+spec:
+  interval: 1m0s
+  url: https://actions-runner-controller.github.io/actions-runner-controller

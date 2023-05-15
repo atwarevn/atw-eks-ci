@@ -35,6 +35,13 @@ flux create helmrelease karpenter --chart karpenter \
   --create-target-namespace \
   --export > ./clusters/karpenter/karpenter-release.yaml
 ```
+```shell
+flux create helmrelease actions-runner-controller --chart actions-runner-controller \
+  --source HelmRepository/actions-runner-controller \
+  --chart-version 0.23.3 \
+  --namespace actions-runner-system \
+  --export > ./clusters/runner/release.yaml
+```
 
 # Troubleshooting
 ### Cluster Nodes got Unknown status
