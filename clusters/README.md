@@ -82,7 +82,7 @@ Error message: `error GitRepository/flux-system.flux-system - Reconciler error f
 1. Generate new token.
 2. Encode token.
    ```shell
-   echo -n 'NEW_TOKEN' | base64
+   echo -n '***' | base64
    ```
 3. Edit secret with encoded token.
    ```shell

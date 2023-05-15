@@ -210,7 +210,7 @@ export GITHUB_USER=jack.harrison@atware.asia
 flux bootstrap git \
   --url=https://github.com/atwarevn/atw-eks-ci \
   --username=jack.harrison@atware.asia \
-  --password=*** \
+  --password=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 \
   --token-auth=true \
   --path=./clusters
 ```
