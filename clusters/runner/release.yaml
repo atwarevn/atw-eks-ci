@@ -28,7 +28,6 @@ spec:
                 pathType: Exact
         annotations:
           "kubernetes.io/ingress.class": alb
-          #      "alb.ingress.kubernetes.io/load-balancer-name": idm-dev-alb-ci-itos-arc-webhook
           "alb.ingress.kubernetes.io/load-balancer-name": s-eks-ci-alb-webook
           "alb.ingress.kubernetes.io/scheme": internet-facing
           # idm-dev-subnet-operation-public-*
