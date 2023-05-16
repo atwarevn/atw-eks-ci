@@ -3,15 +3,15 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: actions-runner-controller
-  namespace: actions-runner-system
+  namespace: actions-action-runner-controller-system
 spec:
   chart:
     spec:
-      chart: actions-runner-controller
+      chart: actions-action-runner-controller-controller
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: actions-runner-controller
+        name: actions-action-runner-controller-controller
       version: 0.23.3
   interval: 1m0s
   values:
