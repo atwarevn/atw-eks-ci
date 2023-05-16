@@ -22,7 +22,6 @@ spec:
       ingress:
         enabled: true
         hosts:
-          # TODO: create ALB
           - host: s-eks-ci-alb-webook-228087039.ap-northeast-1.elb.amazonaws.com
             paths:
               - path: "/actions-webhook"
