@@ -15,4 +15,11 @@ spec:
       version: 1.5.2
   interval: 1m0s
   values:
+    region: ap-northeast-1
+    vpcId: vpc-0a3bd6a4f6548ed7b
     clusterName: s-eks-ci
+    serviceAccount:
+      create: false
+      name: loadbalancer-controller
+#    image:
+#      repository: 602401143452.dkr.ecr.ap-northeast-1.amazonaws.com/amazon/aws-load-balancer-controller
