@@ -22,8 +22,7 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - host: s-eks-ci-alb-webook-228087039.ap-northeast-1.elb.amazonaws.com
-            paths:
+          - paths:
               - path: "/actions-webhook"
                 pathType: Exact
         annotations:
