@@ -4,6 +4,7 @@ metadata:
   name: aws-auth
   namespace: kube-system
 data:
+  # TODO: add involved users
   mapUsers: |
     - userarn: arn:aws:iam::234002441930:user/habac.jacie@atware.asia
       username: jacie

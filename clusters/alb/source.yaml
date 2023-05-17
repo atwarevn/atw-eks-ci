@@ -4,7 +4,7 @@ metadata:
   name: loadbalancer-controller
   namespace: kube-system
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/eks-ci-alb-controller-role"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/eks-ci-alb-controller-role" #TODO: will be created by Terraform
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository

@@ -33,6 +33,4 @@ spec:
           "alb.ingress.kubernetes.io/subnets": subnet-01301e6e006838c11, subnet-065893bdd48900cfb, subnet-088766eb7f7bc5772
           # prisma access + GitHub Enterprise Server
           #      "alb.ingress.kubernetes.io/inbound-cidrs": 66.159.200.79/32, 137.83.216.7/32, 137.83.216.125/32, 208.127.111.180/32, 52.196.244.72/32, 52.199.110.99/32
-          # *.dev.test.businessportal.kddi.com
-          #      "alb.ingress.kubernetes.io/certificate-arn": arn:aws:acm:ap-northeast-1:933934743011:certificate/ebe5b5c0-df94-4c4c-baf2-d67185451efb
           "alb.ingress.kubernetes.io/target-type": ip

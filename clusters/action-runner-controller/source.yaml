@@ -10,7 +10,7 @@ metadata:
   namespace: actions-runner-system
 type: Opaque
 data:
-  github_token: Z2hwX1doWG9vdGpaUE9ZQ1h1NzBnQll4bnhZc1Jqd1Z5ZDFFSGxMWA==
+  github_token: Z2hwX1doWG9vdGpaUE9ZQ1h1NzBnQll4bnhZc1Jqd1Z5ZDFFSGxMWA== #TODO: update admin token
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository

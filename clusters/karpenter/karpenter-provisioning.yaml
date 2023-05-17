@@ -33,3 +33,18 @@ spec:
     karpenter.sh/discovery: s-eks-ci
   securityGroupSelector:
     karpenter.sh/discovery: s-eks-ci
+#  subnetSelector:
+#    Name: "idm-*-subnet-operation-private-*"
+#  securityGroupSelector:
+#    Name: "eks-cluster-sg-idm-*-eks-ci-*"
+#
+#  blockDeviceMappings:
+#    - deviceName: /dev/xvda
+#      ebs:
+#        volumeSize: 30Gi  # デフォルト (20G) から増やす
+#        volumeType: gp3
+#        iops: 3000
+#        encrypted: true
+#        kmsKeyID: "arn:aws:kms:ap-northeast-1:933934743011:key/3ce63ed9-2498-4a9c-96e2-cf081264171f" # TODO: no hard code
+#        deleteOnTermination: true
+#        throughput: 125
