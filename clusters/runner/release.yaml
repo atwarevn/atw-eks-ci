@@ -21,7 +21,7 @@ spec:
     spec:
       securityContext:
         fsGroup: 1000
-        serviceAccountName: runner-dev
+      serviceAccountName: runner-dev
       labels:
         - dev
       organization: atwarevn
