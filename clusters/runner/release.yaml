@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: runners
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: runner-dev
+  namespace: runners
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/eks-ci-runner-role"
+---
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: dev
+  namespace: runners
+spec:
+  template:
+    spec:
+      securityContext:
+        fsGroup: 1000
+        serviceAccountName: runner-dev
+      labels:
+        - dev
+      organization: atwarevn
+---
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: HorizontalRunnerAutoscaler
+metadata:
+  name: dev
+  namespace: runners
+spec:
+  scaleTargetRef:
+    kind: RunnerDeployment
+    name: dev
+  minReplicas: 0
+  maxReplicas: 100
+  scaleUpTriggers:
+    - githubEvent:
+        workflowJob: {}
+      duration: "30m"
+  scaleDownDelaySecondsAfterScaleOut: 300
