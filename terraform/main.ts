@@ -24,9 +24,10 @@ class MyStack extends TerraformStack {
     this.attachS3Backend();
 
     const vpc = new Vpc(this, "VPC", {
-      name: "operation-vpc",
+      name: `xxx-${this.config.env}-vpc-operation`,
       cidr: "192.168.0.0/16",
       azs: [`${this.config.region}a`, `${this.config.region}c`],
+
       publicSubnets: ["192.168.5.0/24", "192.168.6.0/24"],
       publicSubnetTags: {
         tier: "public",
