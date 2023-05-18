@@ -1,0 +1,33 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "projectId": "e8344910-aabe-4f15-bec8-621b1c979aec",
+  "sendCrashReports": "false",
+  "terraformProviders": [],
+  "terraformModules": [
+    {
+      "name": "vpc",
+      "source": "terraform-aws-modules/vpc/aws",
+      "version": "~> 4.0"
+    },
+    {
+      "name": "eks",
+      "source": "terraform-aws-modules/eks/aws",
+      "version": "19.13.1"
+    },
+    {
+      "name": "eks-managed-node-group",
+      "source": "terraform-aws-modules/eks/aws//modules/eks-managed-node-group",
+      "version": "19.13.1"
+    },
+    {
+      "name": "karpenter",
+      "source": "terraform-aws-modules/eks/aws//modules/karpenter",
+      "version": "19.13.1"
+    }
+  ],
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}
