@@ -66,7 +66,7 @@ class MyStack extends TerraformStack {
   attachS3Backend() {
     new S3Backend(this, {
       region: this.config.region,
-      bucket: `stlweb-${this.config.env}-tfstate`,
+      bucket: `xxx-${this.config.env}-tfstate`,
       key: "ci.tfstate",
     });
   }
