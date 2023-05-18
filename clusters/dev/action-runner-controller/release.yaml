@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: actions-runner-controller
+  namespace: actions-runner-system
+spec:
+  values:
+    githubWebhookServer:
+        annotations:
+          "alb.ingress.kubernetes.io/load-balancer-name": s-eks-ci-alb-controller-webook
+          # TODO: update subnet
+          "alb.ingress.kubernetes.io/subnets": subnet-01301e6e006838c11, subnet-065893bdd48900cfb, subnet-088766eb7f7bc5772
+          # prisma access + GitHub Enterprise Server
+          #      "alb-controller-controller.ingress.kubernetes.io/inbound-cidrs": 66.159.200.79/32, 137.83.216.7/32, 137.83.216.125/32, 208.127.111.180/32, 52.196.244.72/32, 52.199.110.99/32

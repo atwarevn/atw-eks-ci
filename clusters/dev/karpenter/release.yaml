@@ -5,19 +5,6 @@ metadata:
   name: karpenter
   namespace: karpenter
 spec:
-  releaseName: karpenter
-  chart:
-    spec:
-      chart: karpenter
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: HelmRepository
-        name: karpenter
-      interval: 1m
-      version: v0.27.3
-  interval: 24h
-  install:
-    createNamespace: true
   values:
     replicas: 1
     serviceAccount:

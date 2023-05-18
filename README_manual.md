@@ -210,9 +210,9 @@ export GITHUB_USER=jack.harrison@atware.asia
 flux bootstrap git \
   --url=https://github.com/atwarevn/atw-eks-ci \
   --username=jack.harrison@atware.asia \
-  --password=*** \
+  --password=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 \
   --token-auth=true \
-  --path=./clusters
+  --path=./clusters/dev
 ```
 ```shell
 flux create source helm actions-runner-controller --url https://actions-runner-controller.github.io/actions-runner-controller
