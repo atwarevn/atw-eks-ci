@@ -16,8 +16,6 @@ spec:
   interval: 1m0s
   values:
     region: ap-northeast-1
-    vpcId: vpc-0a3bd6a4f6548ed7b
-    clusterName: s-eks-ci
     serviceAccount:
       create: false
       name: loadbalancer-controller
