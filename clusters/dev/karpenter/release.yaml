@@ -15,7 +15,7 @@ spec:
       aws:
         #TODO: will be created by Terraform
         clusterName: s-eks-ci
-        clusterEndpoint: https://24EA2CF7717A43BBDBF1F8645ADAD145.gr7.ap-northeast-1.eks.amazonaws.com
+        clusterEndpoint: https://B774E9B9255FBFA170BE60EBE81CC155.gr7.ap-northeast-1.eks.amazonaws.com
         defaultInstanceProfile: KarpenterNodeInstanceProfile-s-eks-ci
         interruptionQueueName: s-eks-ci
 
