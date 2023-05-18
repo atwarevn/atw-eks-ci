@@ -10,3 +10,7 @@ data:
       username: jacie
       groups:
         - system:masters
+    - userarn: arn:aws:iam::234002441930:user/ngoc.dang@atware.asia
+      username: ngoc
+      groups:
+        - system:masters
