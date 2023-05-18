@@ -1,11 +1,3 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: aws-load-balancer-controller
-  namespace: kube-system
-  annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/eks-ci-alb-controller-controller-controller-role" #TODO: will be created by Terraform
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
