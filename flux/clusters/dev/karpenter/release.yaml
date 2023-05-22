@@ -14,7 +14,7 @@ spec:
     settings:
       aws:
         clusterName: xxx-dev-eks-ci
-        clusterEndpoint: https://F65D5D35023CC6339F6AE510BAD3E37A.gr7.ap-northeast-1.eks.amazonaws.com
+        clusterEndpoint: https://AFFA8B95C64C9A2E1894F50CB25CC993.gr7.ap-northeast-1.eks.amazonaws.com
         defaultInstanceProfile: xxx-dev-role-eks-ci-karpenter
         interruptionQueueName: xxx-dev-queue-eks-ci-karpenter
 
