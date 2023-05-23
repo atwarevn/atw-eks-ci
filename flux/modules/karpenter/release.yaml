@@ -20,11 +20,9 @@ metadata:
   namespace: karpenter
 spec:
   interval: 5m
-  releaseName: karpenter
   chart:
     spec:
       chart: karpenter
-      reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: karpenter
