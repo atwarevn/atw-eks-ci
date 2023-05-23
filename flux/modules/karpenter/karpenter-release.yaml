@@ -5,6 +5,7 @@ metadata:
   name: karpenter
   namespace: karpenter
 spec:
+  interval: 5m
   releaseName: karpenter
   chart:
     spec:
@@ -16,6 +17,5 @@ spec:
         namespace: karpenter
       interval: 1m
       version: v0.27.3
-  interval: 24h
   install:
     createNamespace: true
