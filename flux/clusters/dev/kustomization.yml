@@ -3,5 +3,7 @@ kind: Kustomization
 resources:
   - ./aws-auth/release.yml
   - ../../modules/cert-manager
-  - ./karpenter
+  - ../../modules/karpenter
   - ../../modules/karpenter-provisioning
+patchesStrategicMerge:
+  - ./karpenter/patch-release.yaml
