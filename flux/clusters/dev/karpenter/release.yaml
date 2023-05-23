@@ -3,6 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: karpenter-release
+  namespace: karpenter
 spec:
   values:
     replicas: 1
