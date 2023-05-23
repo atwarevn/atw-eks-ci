@@ -6,7 +6,7 @@ metadata:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: karpenter
+  name: karpenter-source
   namespace: karpenter
 spec:
   interval: 1m0s
@@ -25,7 +25,7 @@ spec:
       chart: karpenter
       sourceRef:
         kind: HelmRepository
-        name: karpenter
+        name: karpenter-source
         namespace: karpenter
       interval: 1m
       version: v0.27.3
