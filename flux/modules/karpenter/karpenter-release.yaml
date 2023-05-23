@@ -12,7 +12,7 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: karpenter
+        name: karpenter-source
       interval: 1m
       version: v0.27.3
   interval: 24h
