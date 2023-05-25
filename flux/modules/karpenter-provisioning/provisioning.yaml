@@ -38,6 +38,9 @@ spec:
     Name: "xxx-*-vpc-operation-private-*" #xxx-dev-vpc-operation-private-ap-northeast-1c
   securityGroupSelector:
     Name: "xxx-*-sg-eks-ci-cluster" #xxx-dev-sg-eks-ci-cluste
+  tags:
+    karpenter.sh/discovery: xxx-dev-eks-ci
+
 #
 #  blockDeviceMappings:
 #    - deviceName: /dev/xvda
