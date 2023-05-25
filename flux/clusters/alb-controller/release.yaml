@@ -1,9 +1,0 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
-metadata:
-  name: aws-load-balancer-controller
-  namespace: kube-system
-spec:
-  values:
-    vpcId: vpc-0a3bd6a4f6548ed7b #TODO: will be created by Terraform
-    clusterName: s-eks-ci #TODO: will be created by Terraform

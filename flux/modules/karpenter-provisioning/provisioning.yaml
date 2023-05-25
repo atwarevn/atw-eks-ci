@@ -30,15 +30,10 @@ kind: AWSNodeTemplate
 metadata:
   name: karpenter
 spec:
-#  subnetSelector:
-#    karpenter.sh/discovery: s-eks-ci
-#  securityGroupSelector:
-#    karpenter.sh/discovery: s-eks-ci
   subnetSelector:
     Name: "xxx-*-vpc-operation-private-*" #xxx-dev-vpc-operation-private-ap-northeast-1c
   securityGroupSelector:
     Name: "eks-cluster-sg-xxx-*-eks-ci-*" #xxx-dev-sg-eks-ci-cluste
-#
 #  blockDeviceMappings:
 #    - deviceName: /dev/xvda
 #      ebs:
