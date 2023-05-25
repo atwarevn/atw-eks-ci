@@ -11,4 +11,4 @@ spec:
     region: ap-northeast-1
     serviceAccount:
       create: false
-      name: loadbalancer-controller
+      name: aws-load-balancer-controller
