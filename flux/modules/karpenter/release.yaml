@@ -31,3 +31,15 @@ spec:
       version: v0.27.3
   install:
     createNamespace: true
+  values:
+    replicas: 1
+    serviceAccount:
+      annotations:
+        eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/xxx-dev-role-eks-ci-karpenter-irsa"
+        name: karpenter
+    settings:
+      aws:
+        clusterName: xxx-dev-eks-ci
+        clusterEndpoint: https://AFFA8B95C64C9A2E1894F50CB25CC993.gr7.ap-northeast-1.eks.amazonaws.com
+        defaultInstanceProfile: xxx-dev-role-eks-ci-karpenter
+        interruptionQueueName: xxx-dev-queue-eks-ci-karpenter
