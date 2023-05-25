@@ -6,8 +6,8 @@ resources:
   - ../../modules/karpenter
   - ../../modules/karpenter-provisioning
   - ./alb-controller/service-account.yaml
-#  - ../../modules/alb-controller
+  - ../../modules/alb-controller
 patchesStrategicMerge:
   - ./karpenter/patch-release.yaml
   - ./karpenter/patch-provisioning.yaml
-#  - ./alb-controller/patch-helm.yaml
+  - ./alb-controller/patch-helm.yaml
