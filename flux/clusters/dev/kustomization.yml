@@ -5,5 +5,5 @@ resources:
   - ../../modules/cert-manager
   - ../../modules/karpenter
 #  - ../../modules/karpenter-provisioning
-#patchesStrategicMerge:
-#  - ./karpenter/patch-release.yaml
+patchesStrategicMerge:
+  - ./karpenter/patch-release.yaml
