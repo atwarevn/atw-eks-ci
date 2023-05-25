@@ -23,8 +23,3 @@ spec:
         name: eks
       version: 1.5.2
   interval: 1m0s
-  values:
-    region: ap-northeast-1
-    serviceAccount:
-      create: false
-      name: loadbalancer-controller

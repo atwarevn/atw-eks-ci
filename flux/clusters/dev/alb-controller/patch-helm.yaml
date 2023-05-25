@@ -8,3 +8,7 @@ spec:
   values:
     vpcId: vpc-0585af8f8bae3e4ad
     clusterName: xxx-dev-eks-ci
+    region: ap-northeast-1
+    serviceAccount:
+      create: false
+      name: loadbalancer-controller
