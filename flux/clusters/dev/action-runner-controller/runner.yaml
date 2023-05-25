@@ -3,6 +3,14 @@ kind: Namespace
 metadata:
   name: runners
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: runner-dev
+  namespace: runners
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::234002441930:role/xxx-dev-role-eks-ci-runner"
+---
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: RunnerDeployment
 metadata:
