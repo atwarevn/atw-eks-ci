@@ -38,17 +38,3 @@ spec:
         namespace: actions-runner-system
       version: 0.23.3
   interval: 1m0s
-  values:
-    githubWebhookServer:
-      enabled: true
-      fullnameOverride: actions-webhook
-      ingress:
-        enabled: true
-        hosts:
-          - paths:
-              - path: "/actions-webhook"
-                pathType: Exact
-        annotations:
-          "kubernetes.io/ingress.class": alb-controller
-          "alb.ingress.kubernetes.io/scheme": internet-facing
-          "alb.ingress.kubernetes.io/target-type": ip

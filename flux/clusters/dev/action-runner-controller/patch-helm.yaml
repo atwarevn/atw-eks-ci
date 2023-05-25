@@ -7,7 +7,18 @@ metadata:
 spec:
   values:
     githubWebhookServer:
+      enabled: true
+      fullnameOverride: actions-webhook
+      ingress:
+        enabled: true
+        hosts:
+          - paths:
+              - path: "/actions-webhook"
+                pathType: Exact
         annotations:
+          "kubernetes.io/ingress.class": alb-controller
+          "alb.ingress.kubernetes.io/scheme": internet-facing
+          "alb.ingress.kubernetes.io/target-type": ip
           "alb.ingress.kubernetes.io/load-balancer-name": xxx-dev-alb-ci-webhook
           "alb.ingress.kubernetes.io/subnets": subnet-050d4c0e9101c75d8, subnet-062f67eb5ae118bd8
           # prisma access + GitHub Enterprise Server
