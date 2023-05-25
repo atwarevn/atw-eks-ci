@@ -1,0 +1,8 @@
+---
+apiVersion: karpenter.k8s.aws/v1alpha1
+kind: AWSNodeTemplate
+metadata:
+  name: karpenter
+spec:
+  tags:
+    karpenter.sh/discovery: xxx-dev-eks-ci

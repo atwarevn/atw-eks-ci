@@ -7,3 +7,4 @@ resources:
   - ../../modules/karpenter-provisioning
 patchesStrategicMerge:
   - ./karpenter/patch-release.yaml
+  - ./karpenter/patch-provisioning.yaml
