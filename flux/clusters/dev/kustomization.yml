@@ -5,8 +5,8 @@ resources:
   - ../../modules/cert-manager
   - ../../modules/karpenter
   - ../../modules/karpenter-provisioning
-  - ../../modules/alb-controller
   - ./alb-controller/service-account.yaml
+  - ../../modules/alb-controller
 patchesStrategicMerge:
   - ./karpenter/patch-release.yaml
   - ./karpenter/patch-provisioning.yaml
