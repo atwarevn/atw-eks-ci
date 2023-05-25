@@ -4,7 +4,17 @@ metadata:
   name: aws-auth
   namespace: kube-system
 data:
-  # TODO: add involved users
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::234002441930:role/xxx-dev-role-eks-ci-karpenter
+      username: system:node:{{EC2PrivateDNSName}}
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::234002441930:role/xxx-dev-role-eks-ci-node-group
+      username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - userarn: arn:aws:iam::234002441930:user/habac.jacie@atware.asia
       username: jacie
